@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# 안녕하세요! 저희는 Olives 팀입니다!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 개발에 열정을 가진 신입 개발자들이 모여 프로젝트를 진행하는 팀입니다.
 
-## Available Scripts
+## 함께 풀스택개발자 과정을 수료후 시작한 팀으로, 다양한 기술과 아이디어를 결합하여 효율적인 어플리케이션을 개발하는 것을 목표로 하고 있습니다.
 
-In the project directory, you can run:
+<br/>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **이번 프로젝트는 팀 결성하고 첫 프로젝트입니다.**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br/>
 
-### `npm test`
+## 이 프로젝트를 통해 신입 개발자로서의 경험과 능력을 향상시킬 수 있을 뿐만 아니라, 소프트웨어 개발과 협업에 대한 중요한 배움을 얻고자 합니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br/>
+<br/>
 
-### `npm run build`
+## [ 프로젝트명 ] Cocktable
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## [ 참여인원 ] 2명
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## [ 프로젝트 노션 ] [프로젝트 정보 보러가기](https://elastic-network-b5d.notion.site/Cocktable-App-b6ae5d9ad1454ae585b6bfae56f6fdcb)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## [ 프로젝트 소개 ]
 
-### `npm run eject`
+> ## 원하는 맛의 칵테일을 보여주는 테이블오더 앱
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+기존의 칵테일 주문 방식은 메뉴판을 봐도 어떤 맛일지 상상하기 어려웠고,
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+음료가 나온 후에 실망하기도 했습니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+따라서, 우리는 손님들이 더욱 편안하게 즐길 수 있는 환경을 제공하기 위해,
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+원하는 맛을 선택하면 그에 맞는 칵테일을 보여주는 테이블오더 앱을 기획했습니다.
 
-## Learn More
+이 앱은 예쁘고 화려한 칵테일을 쉽게 주문할 수 있어,
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+사용자들에게 곧 다가올 여름 분위기를 경험할 수 있는 기회를 제공합니다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br/>
+<br/>
 
-### Code Splitting
+> ## 나만의 맛과 분위기를 즐길 수 있는 커스텀 칵테일
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+커스텀 기능을 통해 나만의 칵테일을 주문하고,
 
-### Analyzing the Bundle Size
+손님들은 예상치 못한 맛이 아닌,
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+자신의 입맛에 딱 맞는 칵테일을 즐길 수 있게 될 것입니다.
 
-### Making a Progressive Web App
+이 앱은 고객들에게 더욱 맞춤화된 칵테일 주문 서비스를 제공함으로써,
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+브랜드 이미지의 향상과 함께 수익 증대를 기대할 수 있습니다.
