@@ -1,0 +1,27 @@
+.foodContant {
+    display: flex;
+    justify-content: space-around;
+}
+
+.foodItem {
+    padding: 3% 0 0 0;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    img {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px; 
+    }
+
+    p {
+        margin: 10px 0 0 0;
+    }
+}
+
+.foodPrice {
+    font-size: 35px;
+    font-weight: 700;
+}

@@ -1,0 +1,50 @@
+/* 앱 이름 폰트 */
+@font-face {
+    font-family: 'Lobster-Regular';
+    src: url('../../../public/fonts/Lobster-Reguler.eot') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.headerMain {
+    margin: 2% 3% 2% 3%;
+    display: flex;
+    color: white;
+}
+
+.headerContant {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.headerInfo {
+    border-left: 2px solid white;
+    padding-left: 1.5%;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+/* 헤더 이미지 */
+.headerMainImg {
+    margin-right: 2%;
+
+    img {
+        width: 45px;
+        height: 45px;
+    }
+
+    span {
+        font-size: 50px;
+        font-weight: 100;
+        font-family: 'Lobster-Regular', cursive;
+    }
+}
+
+/* 테이블 번호 */
+.tableNumber {
+    margin: 0;
+    font-size: 80px;
+    font-weight: 700;
+}

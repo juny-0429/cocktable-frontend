@@ -1,0 +1,18 @@
+:root {
+  background-color: rgb(182, 182, 134);
+}
+
+.centerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mainDiv {
+  width: 1417px;
+  height: 984px;
+  background-color: #1E1E1E;
+  border: 10px solid black;
+  border-radius: 20px;
+}

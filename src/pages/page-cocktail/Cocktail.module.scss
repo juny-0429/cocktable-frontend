@@ -1,0 +1,38 @@
+.cocktailMain {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cocktailItem {
+    padding: 3% 0 0 0;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    letter-spacing: 2px;
+
+    img {
+        width: 350px;
+        height: 350px;
+        border-radius: 20px;
+    }
+
+    p {
+        margin: 1% 0 0 0;
+    }
+}
+
+.cocktailPrice {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+/* 아이콘 선택 */
+.donut {
+    width: 200px;
+    height: 200px;
+    border: 20px solid #e0ac69;
+    border-radius: 50%;
+    background-color: #1E1E1E;
+}
+  
+  

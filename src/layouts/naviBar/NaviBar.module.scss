@@ -1,0 +1,25 @@
+.naviBarMain {
+    margin: 0 3% 0 3%;
+}
+
+.naviBarMenu {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 4px solid #FF5B5B;
+
+    p {
+        width: 100%;
+        margin: 0;
+        padding: 5px 0 5px 0;
+        font-size: 35px;
+        font-weight: 600;
+        color: white;
+        text-align: center;
+    }
+}
+
+.text {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #FF5B5B;
+}
