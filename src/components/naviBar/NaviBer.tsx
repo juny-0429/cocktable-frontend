@@ -1,5 +1,6 @@
 import navStyle from './NaviBar.module.scss'; 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NaviBar() {
 

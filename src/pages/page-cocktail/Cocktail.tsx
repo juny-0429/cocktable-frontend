@@ -1,5 +1,7 @@
 import ctStyle from './Cocktail.module.scss';
 import React from 'react';
+import OrderBtn from '../../components/order-button/OrderBtn';
+import CartBtn from '../../components/cart-button/CartBtn';
 
 function Cocktail() {
 
@@ -22,7 +24,8 @@ function Cocktail() {
                     <p className={ctStyle.cocktailPrice}>15,000</p>
                 </div>
             </div>
-
+            <OrderBtn></OrderBtn>
+            <CartBtn></CartBtn>
         </div>
     );
 }

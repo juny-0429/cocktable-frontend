@@ -12,51 +12,53 @@
     padding: 5%;
     display: flex;
     justify-content: space-between;
-}  
 
-/* 장바구니 비우기 버튼 */
-.basketContant button {
-    padding: 0 10px 0 10px;
-    float: right;
-    background-color: white;
-    font-size: 20px;
-    letter-spacing: 5px;
-}
+
+    /* 장바구니 비우기 버튼 */
+    button {
+        padding: 0 10px 0 10px;
+        float: right;
+        background-color: white;
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+}  
 
 /* 장바구니 타이틀 */
 .basketTitle {
     display: flex;
     align-items: center;
+
+    span {
+        margin-left: 10px;
+        font-size: 33px;
+        font-weight: 700;
+    }
 }
 
-.basketTitle span {
-    margin-left: 10px;
-    font-size: 33px;
-    font-weight: 700;
-}
-
-/* 메뉴 추가 목록 */
+// 메뉴 추가 목록 스타일
 .basketMenuList {
     margin: 5% 0 5% 5%;
     max-height: 72%;
     overflow-y: auto;
-}
-  /* 스크롤 */
-  .basketMenuList::-webkit-scrollbar {
-    width: 10px; /* 스크롤 바의 너비 */
-  }
   
-  .basketMenuList::-webkit-scrollbar-track {
-    background-color: #ffffff; /* 스크롤 바의 트랙 배경색 */
-  }
+    // 스크롤 스타일
+    &::-webkit-scrollbar {
+      width: 10px; // 스크롤 바의 너비
+    }
   
-  .basketMenuList::-webkit-scrollbar-thumb {
-    background-color: #b9b9b9; /* 스크롤 바의 썸네일 배경색 */
-    border-radius: 4px; /* 스크롤 바의 썸네일의 둥근 모서리 */
-  }
+    &::-webkit-scrollbar-track {
+      background-color: #ffffff; // 스크롤 바의 트랙 배경색
+    }
   
-  .basketMenuList::-webkit-scrollbar-thumb:hover {
-    background-color: #FF5B5B; /* 스크롤 바의 썸네일 배경색 (마우스 오버 시) */
+    &::-webkit-scrollbar-thumb {
+      background-color: #b9b9b9; // 스크롤 바의 썸네일 배경색
+      border-radius: 4px; // 스크롤 바의 썸네일의 둥근 모서리
+    }
+  
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #FF5B5B; // 스크롤 바의 썸네일 배경색 (마우스 오버 시)
+    }
   }
   
 
@@ -88,12 +90,12 @@
     margin: 7%;
     display: flex;
     justify-content: space-between;
-}
 
-.basketMenuCount span {
-    color: #555555;
-    font-size: 35px;
-    font-weight: 700;
+    span {
+        color: #555555;
+        font-size: 35px;
+        font-weight: 700;
+    }
 }
 
 /* 합계 */
@@ -104,11 +106,11 @@
     margin: 5%;
     display: flex;
     justify-content: space-between;
-}  
 
-.basketTotal span {
-    font-size: 30px;
-}
+    span {
+        font-size: 30px;
+    }
+}  
 
 .basketTotalPrice {
     font-size: 35px;

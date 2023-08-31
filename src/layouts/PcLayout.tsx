@@ -3,7 +3,7 @@ import React from 'react';
 import PLstyle from './PcLayout.module.scss';
 import { Outlet } from 'react-router-dom';
 import Header from './header/Header';
-import NaviBar from './naviBar/NaviBer';
+import NaviBar from '../components/naviBar/NaviBer';
 
 function PcLayout() {
   return (

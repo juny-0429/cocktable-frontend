@@ -1,14 +1,9 @@
-// import Basket from '../../component/Basket';
 import foodStyle from './Food.module.scss';
-import React, { useState } from 'react';
+import React from 'react';
+import OrderBtn from '../../components/order-button/OrderBtn';
+import CartBtn from '../../components/cart-button/CartBtn';
 
 function Food() {
-
-    const [isBasketVisible, setBasketVisible] = useState(false);
-
-    const handleBasketClick = () => {
-        setBasketVisible(!isBasketVisible);
-    };
    
     return (
         <div>
@@ -64,13 +59,8 @@ function Food() {
                 </div>
             </div>
 
-             {/* Basket */}
-            {/* {isBasketVisible && <Basket />}
-
-            <div className={orderBtnStyle.orderBtnBox}>
-                <button onClick={handleBasketClick}>주문하기</button>
-                <button onClick={handleBasketClick}>장바구니</button>
-            </div> */}
+            <OrderBtn></OrderBtn>
+            <CartBtn></CartBtn>
         </div>
     )
 }
