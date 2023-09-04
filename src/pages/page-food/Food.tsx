@@ -8,7 +8,7 @@ function Food() {
     console.log("FoodData = ", FoodData);
 
     return (
-        <div>
+        <div className={foodStyle.foodContainer}>
             <div className={foodStyle.foodContant}>
                 {FoodData.map((item, index) => (
                     <div key={index} className={foodStyle.foodItem}>
