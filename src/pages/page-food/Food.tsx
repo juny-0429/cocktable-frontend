@@ -8,8 +8,8 @@ function Food() {
     console.log("FoodData = ", FoodData);
 
     return (
-        <div className={foodStyle.foodContainer}>
-            <div className={foodStyle.foodContant}>
+        <div className="container">
+            <div className={foodStyle.foodMain}>
                 {FoodData.map((item, index) => (
                     <div key={index} className={foodStyle.foodItem}>
                         <img src={item.src} alt={item.name} />
