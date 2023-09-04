@@ -1,4 +1,4 @@
-import OBStyle from './orderBtn.module.scss';
+import OBStyle from './OrderBtn.module.scss';
 import React from "react";
 
 function OrderBtn(props: any) {

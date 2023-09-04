@@ -1,10 +1,15 @@
 .foodContant {
+    height: 200px;
+    overflow-x: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    margin: -10px;
 }
 
 .foodItem {
-    padding: 3% 0 0 0;
+    width: calc(25% - 20px);
+    padding: 40px 10px 10px 10px;
     text-align: center;
     color: white;
     font-size: 20px;
