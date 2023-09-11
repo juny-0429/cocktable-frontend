@@ -2,28 +2,22 @@ import ctStyle from './Cocktail.module.scss';
 import React from 'react';
 import OrderBtn from '../../components/order-button/OrderBtn';
 import CartBtn from '../../components/cart-button/CartBtn';
+import CocktailData from '../../test-data/Cocktail.json';
 
 function Cocktail() {
 
     return (
         <div className="container">
             <div className={ctStyle.cocktailMain}>
-                <div className={ctStyle.cocktailItem}>
-                    <img src="/images/002.png" alt='테스트 이미지'/>
-                    <p>벨리니</p>
-                    <p className={ctStyle.cocktailPrice}>15,000</p>
-                </div>
-                <div className={ctStyle.cocktailItem}>
-                    <img src="/images/002.png" alt='테스트 이미지'/>
-                    <p>벨리니</p>
-                    <p className={ctStyle.cocktailPrice}>15,000</p>
-                </div>
-                <div className={ctStyle.cocktailItem}>
-                    <img src="/images/002.png" alt='테스트 이미지'/>
-                    <p>벨리니</p>
-                    <p className={ctStyle.cocktailPrice}>15,000</p>
-                </div>
+                {CocktailData.map((item, index) => (
+                    <div key={index} className={ctStyle.cocktailItem}>
+                        <img src={item.src} alt={item.name}/>
+                        <p>{item.name}</p>
+                        <p className={ctStyle.cocktailPrice}>{item.price}</p>
+                    </div>
+                ))}
             </div>
+            
             <OrderBtn></OrderBtn>
             <CartBtn></CartBtn>
         </div>
