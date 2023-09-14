@@ -1,37 +1,31 @@
-import PNstyle from './Pagination.scss';
-import React, { useState } from 'react';
+import React from 'react';
+import PNstyle from './Pagination.module.scss';
 
 interface PaginationProps {
-  itemsPerPage: number;
   totalItems: number;
-  paginate: (pageNumber: number) => void;
+  itemsPerPage: number;
+  currentPage: number;
+  onPageChange: (page: number) => void;
 }
 
-const Pagination: React.FC<PaginationProps> = ({ itemsPerPage, totalItems, paginate }) => {
-  const pageNumbers = [];
-
-  for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
-    pageNumbers.push(i);
-  }
-
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const handleClick = (pageNumber: number) => {
-    setCurrentPage(pageNumber);
-    paginate(pageNumber);
-  };
+const Pagination: React.FC<PaginationProps> = ({ totalItems, itemsPerPage, currentPage, onPageChange }) => {
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
 
   return (
     <nav className={PNstyle.pagination}>
-        <ul>
-            {pageNumbers.map((number) => (
-                <li key={number} className={currentPage === number ? 'active' : ''}>
-                    <p onClick={() => handleClick(number)}>
-                        sdf&#9679; {/* 점 모양 */}
-                    </p>
-                </li>
-            ))}
-        </ul>
+      <ul className={PNstyle.paginationList}>
+        {pageNumbers.map((pageNumber) => (
+          <li
+            key={pageNumber}
+            className={`${PNstyle.paginationItem} ${currentPage === pageNumber ? PNstyle.active : ''}`}
+            onClick={() => onPageChange(pageNumber)}
+          >
+            {/* 페이지 번호 대신 점(●) 모양으로 표시 */}
+            <span className={PNstyle.paginationLink}>●</span>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 };
