@@ -43,10 +43,18 @@ function Wine() {
 
                             <div className={wineStyle.wineInfoContainer}>
                                 <div className={wineStyle.wineFeatures}>
-                                    <p>산도 :{generateStarRating(item.acidity)}</p>
-                                    <p>당도 : {generateStarRating(item.sweetness)}</p>
-                                    <p>바디감 : {generateStarRating(item.body)}</p>
-                                    <p>탄닌 : {generateStarRating(item.tannin)}</p>
+                                    <div>
+                                        <p>산도 :</p>
+                                        <p>당도 :</p>
+                                        <p>바디감 :</p>
+                                        <p>탄닌 :</p>
+                                    </div>
+                                    <div>
+                                        <p>{generateStarRating(item.acidity)}</p>
+                                        <p>{generateStarRating(item.sweetness)}</p>
+                                        <p>{generateStarRating(item.body)}</p>
+                                        <p>{generateStarRating(item.tannin)}</p>
+                                    </div>
                                 </div>
                                 <div className={wineStyle.alc}>
                                     <p>ALC</p>

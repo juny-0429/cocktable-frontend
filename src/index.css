@@ -16,3 +16,16 @@ code {
   height: 650px;
   margin: 1% 3% 0 3%;
 }
+
+/* 스크롤 css */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E1E1E;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1E1E1E;
+}
