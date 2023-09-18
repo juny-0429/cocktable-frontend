@@ -1,10 +1,10 @@
 .basketMain {
-    width: 25%;
+    width: 30%;
     height: 984px;
-    top: -878px;
+    top: -870px;
+    right: -42px;
     background-color: white;
-    position: relative;
-    float: right;
+    position: absolute;
     border-radius: 10px;
 }
 
@@ -18,9 +18,12 @@
     button {
         padding: 0 10px 0 10px;
         float: right;
-        background-color: white;
+        color: #555555;
         font-size: 20px;
         letter-spacing: 5px;
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 5px;
     }
 }  
 
@@ -133,3 +136,24 @@
     font-weight: 700;
     letter-spacing: 20px;
 }
+
+/* 스크롤바 너비와 배경색 지정 */
+.basketMenuList::-webkit-scrollbar {
+    width: 10px; /* 스크롤바 너비 */
+  }
+  
+  .basketMenuList::-webkit-scrollbar-track {
+    background-color: #ffffff; /* 스크롤바 트랙 배경색 */
+  }
+  
+  /* 스크롤바 썸네일 스타일 지정 */
+  .basketMenuList::-webkit-scrollbar-thumb {
+    background-color: #b9b9b9; /* 스크롤바 썸네일 배경색 */
+    border-radius: 4px; /* 스크롤바 썸네일 둥근 모서리 */
+  }
+  
+  /* 스크롤바 썸네일 호버 시 스타일 변경 */
+  .basketMenuList::-webkit-scrollbar-thumb:hover {
+    background-color: #FF5B5B; /* 스크롤바 썸네일 배경색 (마우스 오버 시) */
+  }
+  

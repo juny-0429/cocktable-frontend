@@ -1,15 +1,18 @@
-import cartStyle from './CartItem.module.scss';
+import cartStyle from './Cart.module.scss';
 import React from 'react';
 
 import { FiShoppingCart } from 'react-icons/fi'; // https://react-icons.github.io/react-icons
 import { IoAddCircleSharp } from 'react-icons/io5';
 import { IoRemoveCircleSharp } from 'react-icons/io5';
 import { AiFillCloseCircle } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
 
 // 사용 예시:
 {/* <IoRemoveCircleSharp size={40} color="#FF5B5B" /> */}
 
-function Cart() {
+function Cart(props: any) {
+
+    const { onClose } = props;
 
     return (
         <div className={cartStyle.basketMain}>
@@ -19,6 +22,7 @@ function Cart() {
                     <span>장바구니</span>
                 </div>
                 <button>비우기</button>
+                <AiOutlineClose size={25} color="#787878" onClick={onClose} />
             </div>
 
             <div className={cartStyle.basketMenuList}>
