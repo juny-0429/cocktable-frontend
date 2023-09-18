@@ -1,159 +1,159 @@
 .basketMain {
-    width: 30%;
-    height: 984px;
-    top: -870px;
-    right: -42px;
-    background-color: white;
-    position: absolute;
-    border-radius: 10px;
+  width: 30%;
+  height: 984px;
+  top: -870px;
+  right: -42px;
+  background-color: white;
+  position: absolute;
+  border-radius: 10px;
 }
 
 .basketContant {
-    padding: 5%;
-    display: flex;
-    justify-content: space-between;
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
 
 
-    /* 장바구니 비우기 버튼 */
-    button {
-        padding: 0 10px 0 10px;
-        float: right;
-        color: #555555;
-        font-size: 20px;
-        letter-spacing: 5px;
-        background-color: white;
-        border: 1px solid #555555;
-        border-radius: 5px;
-    }
+  /* 장바구니 비우기 버튼 */
+  button {
+    padding: 0 10px 0 10px;
+    float: right;
+    color: #555555;
+    font-size: 20px;
+    letter-spacing: 5px;
+    background-color: white;
+    border: 1px solid #555555;
+    border-radius: 5px;
+  }
 }  
 
 /* 장바구니 타이틀 */
 .basketTitle {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    span {
-        margin-left: 10px;
-        font-size: 33px;
-        font-weight: 700;
-    }
+  span {
+    margin-left: 10px;
+    font-size: 33px;
+    font-weight: 700;
+  }
 }
 
 // 메뉴 추가 목록 스타일
 .basketMenuList {
-    margin: 5% 0 5% 5%;
-    max-height: 72%;
-    overflow-y: auto;
-  
-    // 스크롤 스타일
-    &::-webkit-scrollbar {
-      width: 10px; // 스크롤 바의 너비
-    }
-  
-    &::-webkit-scrollbar-track {
-      background-color: #ffffff; // 스크롤 바의 트랙 배경색
-    }
-  
-    &::-webkit-scrollbar-thumb {
-      background-color: #b9b9b9; // 스크롤 바의 썸네일 배경색
-      border-radius: 4px; // 스크롤 바의 썸네일의 둥근 모서리
-    }
-  
-    &::-webkit-scrollbar-thumb:hover {
-      background-color: #FF5B5B; // 스크롤 바의 썸네일 배경색 (마우스 오버 시)
-    }
+  margin: 5% 0 5% 5%;
+  max-height: 72%;
+  overflow-y: auto;
+
+  // 스크롤 스타일
+  &::-webkit-scrollbar {
+    width: 10px; // 스크롤 바의 너비
   }
+
+  &::-webkit-scrollbar-track {
+    background-color: #ffffff; // 스크롤 바의 트랙 배경색
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #b9b9b9; // 스크롤 바의 썸네일 배경색
+    border-radius: 4px; // 스크롤 바의 썸네일의 둥근 모서리
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #FF5B5B; // 스크롤 바의 썸네일 배경색 (마우스 오버 시)
+  }
+}
   
 
 .basketMenuItem {
-    margin-bottom: 10%;
-    padding-bottom: 10%;
-    border-bottom: 1px solid #dedede;
+  margin-bottom: 10%;
+  padding-bottom: 10%;
+  border-bottom: 1px solid #dedede;
 }
 
 .basketMenuTitle {
-    margin: 0;
-    font-size: 25px;
+  margin: 0;
+  font-size: 25px;
 }
 
 .basketMenuPrice {
-    margin: 2% 0 0 0;
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 3px;
+  margin: 2% 0 0 0;
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 
 .basketMenuCloseIcon {
-    position: relative;
-    left: 90%;
+  position: relative;
+  left: 90%;
 }
 
 /* 메뉴 갯수 */
 .basketMenuCount {
-    margin: 7%;
-    display: flex;
-    justify-content: space-between;
+  margin: 7%;
+  display: flex;
+  justify-content: space-between;
 
-    span {
-        color: #555555;
-        font-size: 35px;
-        font-weight: 700;
-    }
+  span {
+    color: #555555;
+    font-size: 35px;
+    font-weight: 700;
+  }
 }
 
 /* 합계 */
 .basketTotal {
-    position: absolute;
-    bottom: 10%;
-    width: 90%;
-    margin: 5%;
-    display: flex;
-    justify-content: space-between;
+  position: absolute;
+  bottom: 10%;
+  width: 90%;
+  margin: 5%;
+  display: flex;
+  justify-content: space-between;
 
-    span {
-        font-size: 30px;
-    }
+  span {
+    font-size: 30px;
+  }
 }  
 
 .basketTotalPrice {
-    font-size: 35px;
-    font-weight: 600;
+  font-size: 35px;
+  font-weight: 600;
 }
 
 /* 주문하기 버튼 */
 .basketOrderButton {
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    width: 100%;
-    height: 10%;
-    transform: translateX(-50%);
-    border: 0px;
-    border-radius: 0 0 10px 10px;
-    background-color: #FF5B5B;
-    color: white;
-    font-size: 50px;
-    font-weight: 700;
-    letter-spacing: 20px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 100%;
+  height: 10%;
+  transform: translateX(-50%);
+  border: 0px;
+  border-radius: 0 0 10px 10px;
+  background-color: #FF5B5B;
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 20px;
 }
 
 /* 스크롤바 너비와 배경색 지정 */
 .basketMenuList::-webkit-scrollbar {
-    width: 10px; /* 스크롤바 너비 */
-  }
-  
-  .basketMenuList::-webkit-scrollbar-track {
-    background-color: #ffffff; /* 스크롤바 트랙 배경색 */
-  }
-  
-  /* 스크롤바 썸네일 스타일 지정 */
-  .basketMenuList::-webkit-scrollbar-thumb {
-    background-color: #b9b9b9; /* 스크롤바 썸네일 배경색 */
-    border-radius: 4px; /* 스크롤바 썸네일 둥근 모서리 */
-  }
-  
-  /* 스크롤바 썸네일 호버 시 스타일 변경 */
-  .basketMenuList::-webkit-scrollbar-thumb:hover {
-    background-color: #FF5B5B; /* 스크롤바 썸네일 배경색 (마우스 오버 시) */
-  }
+  width: 10px; /* 스크롤바 너비 */
+}
+
+.basketMenuList::-webkit-scrollbar-track {
+  background-color: #ffffff; /* 스크롤바 트랙 배경색 */
+}
+
+/* 스크롤바 썸네일 스타일 지정 */
+.basketMenuList::-webkit-scrollbar-thumb {
+  background-color: #b9b9b9; /* 스크롤바 썸네일 배경색 */
+  border-radius: 4px; /* 스크롤바 썸네일 둥근 모서리 */
+}
+
+/* 스크롤바 썸네일 호버 시 스타일 변경 */
+.basketMenuList::-webkit-scrollbar-thumb:hover {
+  background-color: #FF5B5B; /* 스크롤바 썸네일 배경색 (마우스 오버 시) */
+}
   
