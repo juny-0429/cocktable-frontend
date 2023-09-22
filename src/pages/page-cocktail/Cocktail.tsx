@@ -39,8 +39,8 @@ function Cocktail() {
         />
       </div>
 
-      <OrderBtn />
       <CartBtn />
+      <OrderBtn />
     </div>
   );
 }

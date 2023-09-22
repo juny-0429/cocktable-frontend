@@ -4,20 +4,20 @@ import Cart from '../cart/Cart';
 
 function CartBtn(props: any) {
 
-    const [isCartVisible, setIsCartVisible] = useState(false);
+    const [isCartView, setIsCartView] = useState(false);
 
     const handleCartClick = () => {
-        setIsCartVisible(!isCartVisible);
+        setIsCartView(!isCartView);
     };
 
     const handleCloseCart = () => {
-        setIsCartVisible(false);
+        setIsCartView(false);
     };
 
     return (
         <div className={CBStyle.cartBtnLayout}>
             <button className={CBStyle.cartBtn} onClick={handleCartClick}>장바구니</button>
-            {isCartVisible && <Cart onClose={handleCloseCart} />}
+            {isCartView && <Cart onClose={handleCloseCart} />}
         </div>
     );
 }
