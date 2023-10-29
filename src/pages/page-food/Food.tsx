@@ -1,20 +1,37 @@
 import foodStyle from './Food.module.scss';
-import React from 'react';
+
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { callFoodAllListAPI } from '../../apis/foodAPICalls';
+import { ThunkDispatch, StringRecord } from '../../types';
+
 import OrderBtn from '../../components/order-button/OrderBtn';
 import CartBtn from '../../components/cart-button/CartBtn';
-import FoodData from '../../test-data/FoodData.json';
+
 
 function Food() {
-    console.log("FoodData = ", FoodData);
+    
+    const foodList = useSelector<StringRecord>(state => state.foodReducer);
+
+    const dispatch: ThunkDispatch = useDispatch();
+
+    useEffect(
+        () => {
+            dispatch(callFoodAllListAPI());
+        },[]
+    )
+
+    console.log("food data check =====", JSON.stringify(foodList));
+
 
     return (
         <div className="container">
             <div className={foodStyle.foodMain}>
-                {FoodData.map((item, index) => (
+                {Array.isArray(foodList)  && foodList.map((food, index) => (
                     <div key={index} className={foodStyle.foodItem}>
-                        <img src={item.src} alt={item.name} />
-                        <p>{item.name}</p>
-                        <p className={foodStyle.foodPrice}>{item.price}</p>
+                        <img src={food.productIMGList[0].imageLocation} alt={food.name} />
+                        <p>{food.name}</p>
+                        <p className={foodStyle.foodPrice}>{food.price}</p>
                     </div>
                 ))}
             </div>

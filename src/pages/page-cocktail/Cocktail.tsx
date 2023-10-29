@@ -28,11 +28,11 @@ function Cocktail() {
 
   const dispatch: ThunkDispatch<{}, {}, any> = useDispatch();
 
-    useEffect(
-        () => {
-            dispatch(callCocktailAllListAPI());
-        },[]
-    )
+  useEffect(
+      () => {
+          dispatch(callCocktailAllListAPI());
+      },[]
+  )
 
   return (
     <div className="container">

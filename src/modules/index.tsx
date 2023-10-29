@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import cocktailReduser from '../modules/cocktailModule';
+import cocktailReduser from './cocktailModule';
+import foodReducer from './foodModule';
 
 const rootReducer = combineReducers({
-    cocktailReduser
+    cocktailReduser,
+    foodReducer
 })
 
 export default rootReducer;
