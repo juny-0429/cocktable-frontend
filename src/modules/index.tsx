@@ -1,10 +1,9 @@
 import { combineReducers } from 'redux';
-import cocktailReduser from './cocktailModule';
-import foodReducer from './foodModule';
+import productPageReducer from './productModule';
 
 const rootReducer = combineReducers({
-    cocktailReduser,
-    foodReducer
+    productPageReducer
+    
 })
 
 export default rootReducer;

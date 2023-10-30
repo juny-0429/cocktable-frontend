@@ -2,7 +2,7 @@ import foodStyle from './Food.module.scss';
 
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { callFoodAllListAPI } from '../../apis/foodAPICalls';
+import { callProductAllListAPI } from '../../apis/productAPICalls';
 import { ThunkDispatch, StringRecord } from '../../types';
 
 import OrderBtn from '../../components/order-button/OrderBtn';
@@ -12,15 +12,15 @@ import { formatNumber } from '../../utils/FormatNumber';
 
 function Food() {
     
-    const foodList = useSelector<StringRecord>(state => state.foodReducer);
+    const foodList = useSelector<StringRecord>(state => state.productPageReducer);
 
     const dispatch: ThunkDispatch = useDispatch();
 
-    useEffect(
-        () => {
-            dispatch(callFoodAllListAPI());
-        },[]
-    )
+    useEffect(() => {
+        dispatch(callProductAllListAPI({
+            categoryCode: "category3"
+        }));
+    }, []);
 
     console.log("food data check =====", JSON.stringify(foodList));
 

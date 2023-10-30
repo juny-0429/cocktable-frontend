@@ -5,10 +5,6 @@ import OrderBtn from '../../components/order-button/OrderBtn';
 import CartBtn from '../../components/cart-button/CartBtn';
 import CocktailData from '../../test-data/Cocktail.json';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { ThunkDispatch } from 'redux-thunk';
-import { callCocktailAllListAPI } from '../../apis/cocktailAPICalls';
-
 function Cocktail() {
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,18 +17,6 @@ function Cocktail() {
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
-
-  const cocktailList = useSelector<Record<string, string>>(state => state.cocktailReduser);
-
-  console.log("리스트 확인 = " + JSON.stringify(cocktailList));
-
-  const dispatch: ThunkDispatch<{}, {}, any> = useDispatch();
-
-  useEffect(
-      () => {
-          dispatch(callCocktailAllListAPI());
-      },[]
-  )
 
   return (
     <div className="container">
