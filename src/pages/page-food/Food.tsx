@@ -7,6 +7,7 @@ import { ThunkDispatch, StringRecord } from '../../types';
 
 import OrderBtn from '../../components/order-button/OrderBtn';
 import CartBtn from '../../components/cart-button/CartBtn';
+import { formatNumber } from '../../utils/FormatNumber';
 
 
 function Food() {
@@ -31,7 +32,7 @@ function Food() {
                     <div key={index} className={foodStyle.foodItem}>
                         <img src={food.productIMGList[0].imageLocation} alt={food.name} />
                         <p>{food.name}</p>
-                        <p className={foodStyle.foodPrice}>{food.price}</p>
+                        <p className={foodStyle.foodPrice}>{formatNumber(food.price)}</p>
                     </div>
                 ))}
             </div>
