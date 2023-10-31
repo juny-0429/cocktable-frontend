@@ -28,7 +28,7 @@ function Food() {
     return (
         <div className="container">
             <div className={foodStyle.foodMain}>
-                {Array.isArray(foodList)  && foodList.map((food, index) => (
+                {Array.isArray(foodList) && foodList.map((food, index) => (
                     <div key={index} className={foodStyle.foodItem}>
                         <img src={food.productIMGList[0].imageLocation} alt={food.name} />
                         <p>{food.name}</p>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function NaviBar() {
 
-    const [activeLink, setActiveLink] = useState<string>("Food");
+    const [activeLink, setActiveLink] = useState<string>("Cocktail");
 
     const links = [
         { name: 'Cocktail', to: '/menu/cocktail' },

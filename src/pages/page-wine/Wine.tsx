@@ -1,68 +1,64 @@
 import wineStyle from './Wine.module.scss';
-import React from 'react';
+
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { callWineAllListAPI } from '../../apis/productAPICalls';
+import { ThunkDispatch, StringRecord } from '../../types';
+
 import OrderBtn from '../../components/order-button/OrderBtn';
 import CartBtn from '../../components/cart-button/CartBtn';
-import WineData from '../../test-data/Wine.json';
+import { formatNumber } from '../../utils/FormatNumber';
+import { generateStarRating } from '../../utils/GenerateStarRating';
 
-function generateStarRating(rating: string) {
-    const maxStars: number = 5; // 최대 별 개수
-    const filledStars: number = parseInt(rating); // 특성 값에 따라 꽉 찬 별 개수를 정합니다
-    const emptyStars = maxStars - filledStars; // 비어있는 별 개수를 계산합니다
-  
-    return (
-      <>
-        {[...Array(filledStars).keys()].map((index) => (
-          <span key={index} className={wineStyle.filledStar}>★</span>
-        ))}
-        {[...Array(emptyStars).keys()].map((index) => (
-          <span key={index} className={wineStyle.emptyStar}>☆</span>
-        ))}
-      </>
-    );
-}
   
 function Wine() {
+
+    const wineList = useSelector<StringRecord>(state => state.productPageReducer);
+
+    const dispatch: ThunkDispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(callWineAllListAPI({
+            categoryCode: "category2"
+        }));
+    }, []);
+
+    console.log("wine list data check ===== ", JSON.stringify(wineList));
 
     return (
         <div className="container">
             <div className={wineStyle.wineMain}>
-                {WineData.map((item, index) => (
+                {Array.isArray(wineList) && wineList.map((wine, index) => (
                     <div key={index} className={wineStyle.wineItem}>
 
-                        <img src={item.src} alt={item.name} />
+                        <img src={wine.productIMGList[0].imageLocation} alt={wine.name} />
 
                         <div className={wineStyle.wineDetails}>
 
                             <div className={wineStyle.wineInfo}>
                                 <div className={wineStyle.wineName}>
-                                    <p>{item.name}</p>
-                                    <p className={wineStyle.nameKR} style={{ color: item.nameColor }}>{item.nameKR}</p>
+                                    <p>{wine.englishName}</p>
+                                    <p className={wineStyle.nameKR} style={{ color: wine.wineInfo[0].wineType }}>{wine.name}({wine.wineInfo[0].wineType} wine)</p>
                                 </div>
-                                <p className={wineStyle.price}>{item.price}</p>
+                                <p className={wineStyle.price}>{formatNumber(wine.price)}</p>
                             </div>
 
                             <div className={wineStyle.wineInfoContainer}>
                                 <div className={wineStyle.wineFeatures}>
                                     <div>
-                                        <p>산도 :</p>
-                                        <p>당도 :</p>
-                                        <p>바디감 :</p>
-                                        <p>탄닌 :</p>
-                                    </div>
-                                    <div>
-                                        <p>{generateStarRating(item.acidity)}</p>
-                                        <p>{generateStarRating(item.sweetness)}</p>
-                                        <p>{generateStarRating(item.body)}</p>
-                                        <p>{generateStarRating(item.tannin)}</p>
+                                        <p>산도  : {generateStarRating(wine.wineInfo[0].wineAcidity)}</p>
+                                        <p>당도  : {generateStarRating(wine.wineInfo[0].wineSweetness)}</p>
+                                        <p>바디  : {generateStarRating(wine.wineInfo[0].wineBody)}</p>
+                                        <p>탄닌  : {generateStarRating(wine.wineInfo[0].wineTannin)}</p>
                                     </div>
                                 </div>
                                 <div className={wineStyle.alc}>
                                     <p>ALC</p>
-                                    <p>{item.alc}</p>
+                                    <p>{wine.wineInfo[0].wineABV}%</p>
                                 </div>
                                 <div className={wineStyle.origin}>
-                                    <p>{item.originKR}</p>
-                                    <p>{item.origin}</p>
+                                    <p>원산지</p>
+                                    <p>{wine.wineInfo[0].wineOrigin}</p>
                                 </div>
                             </div>
                         </div>

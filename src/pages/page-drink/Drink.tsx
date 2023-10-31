@@ -1,19 +1,36 @@
 import drinkStyle from './Drink.module.scss';
-import React from 'react';
+
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { callProductAllListAPI } from '../../apis/productAPICalls';
+import { ThunkDispatch, StringRecord } from '../../types';
+
 import OrderBtn from '../../components/order-button/OrderBtn';
 import CartBtn from '../../components/cart-button/CartBtn';
-import DrinkData from '../../test-data/DrinkData.json';
+import { formatNumber } from '../../utils/FormatNumber';
 
 function Drink() {
+
+    const drinkList = useSelector<StringRecord>(state => state.productPageReducer);
+
+    const dispatch: ThunkDispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(callProductAllListAPI({
+            categoryCode: "category4"
+        }));
+    }, []);
+
+    console.log("food data check =====", JSON.stringify(drinkList));
 
     return (
         <div className="container">
             <div className={drinkStyle.drinkMain}>
-                {DrinkData.map((item, index) => (
+                {Array.isArray(drinkList) && drinkList.map((drink, index) => (
                     <div key={index} className={drinkStyle.drinkItem}>
-                        <img src={item.src} alt={item.name} />
-                        <p>{item.name}</p>
-                        <p className={drinkStyle.drinkPrice}>{item.price}</p>
+                        <img src={drink.productIMGList[0].imageLocation} alt={drink.name} />
+                        <p>{drink.name}</p>
+                        <p className={drinkStyle.drinkPrice}>{drink.price}</p>
                     </div>
                 ))}
             </div>
