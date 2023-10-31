@@ -1,48 +1,46 @@
-import React, { useState, useEffect } from 'react';
 import ctStyle from './Cocktail.module.scss';
-import Pagination from '../../components/paginaion/Pagination'; // 페이지네이션 컴포넌트 임포트
+
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { callProductAllListAPI } from '../../apis/productAPICalls';
+import { ThunkDispatch, StringRecord } from '../../types';
+
 import OrderBtn from '../../components/order-button/OrderBtn';
 import CartBtn from '../../components/cart-button/CartBtn';
-import CocktailData from '../../test-data/Cocktail.json';
+import { formatNumber } from '../../utils/FormatNumber';
+
 
 function Cocktail() {
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 3;
+    const cocktailList = useSelector<StringRecord>(state => state.productPageReducer);
 
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = CocktailData.slice(indexOfFirstItem, indexOfLastItem);
+    const dispatch: ThunkDispatch = useDispatch();
 
-  const handlePageChange = (pageNumber: number) => {
-    setCurrentPage(pageNumber);
-  };
+    useEffect(() => {
+        dispatch(callProductAllListAPI({
+            categoryCode: "category1"
+        }));
+    }, []);
 
-  return (
-    <div className="container">
-      <div className={ctStyle.cocktailMain}>
-        <div className={ctStyle.cocktailItemList}>
-          {currentItems.map((item, index) => (
-            <div key={index} className={ctStyle.cocktailItem}>
-              <img src={item.src} alt={item.name} />
-              <p>{item.name}</p>
-              <p className={ctStyle.cocktailPrice}>{item.price}</p>
+    console.log("cocktail data check =====", JSON.stringify(cocktailList));
+
+
+    return (
+        <div className="container">
+            <div className={ctStyle.cocktailMain}>
+                {Array.isArray(cocktailList) && cocktailList.map((cocktail, index) => (
+                    <div key={index} className={ctStyle.cocktailItem}>
+                        <img src={cocktail.productIMGList[0].imageLocation} alt={cocktail.name} />
+                        <p>{cocktail.name}</p>
+                        <p className={ctStyle.cocktailPrice}>{formatNumber(cocktail.price)}</p>
+                    </div>
+                ))}
             </div>
-          ))}
+
+            <CartBtn />
+            <OrderBtn />
         </div>
-
-        <Pagination
-          totalItems={CocktailData.length}
-          itemsPerPage={itemsPerPage}
-          currentPage={currentPage}
-          onPageChange={handlePageChange}
-        />
-      </div>
-
-      <CartBtn />
-      <OrderBtn />
-    </div>
-  );
+    );
 }
 
 export default Cocktail;

@@ -1,28 +1,26 @@
 .cocktailMain {
     height: 100%;   
-}
-
-.cocktailItemList {
-    margin-bottom: 3%;
+    overflow-x: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start; 
+    flex-wrap: nowrap;
 }
 
 .cocktailItem {
-    padding: 3% 0 0 0;
+    padding: 3% 7% 7% 0;
     text-align: center;
     color: white;
     font-size: 35px;
     letter-spacing: 2px;
 
     img {
-        width: 350px;
-        height: 350px;
+        width: 380px;
+        height: 380px;
         border-radius: 20px;
     }
 
     p {
-        margin: 1% 0 0 0;
+        margin: 3% 0 0 0;
     }
 }
 
