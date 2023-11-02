@@ -32,7 +32,7 @@ function Food() {
                     <div key={index} className={foodStyle.foodItem}>
                         <img src={food.productIMGList[0].imageLocation} alt={food.name} />
                         <p>{food.name}</p>
-                        <p className={foodStyle.foodPrice}>{formatNumber(food.price)}</p>
+                        <p className={foodStyle.foodPrice}>{formatNumber(food.price)}원</p>
                     </div>
                 ))}
             </div>

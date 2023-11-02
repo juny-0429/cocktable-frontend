@@ -1,8 +1,9 @@
 import headerStyle from './Header.module.scss';
 import { Link } from 'react-router-dom';
 
-
 import React from 'react';
+
+const myTableNum: number = 1;
 
 function Header() {
 
@@ -20,7 +21,7 @@ function Header() {
                 </div>
                 
             </div>
-            <p className={headerStyle.tableNumber}>29</p>
+            <p className={headerStyle.tableNumber}>{myTableNum}</p>
 
         </div>
     );

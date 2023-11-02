@@ -1,14 +1,15 @@
-.basketMain {
+.cartMain {
   width: 30%;
   height: 984px;
   top: -870px;
   right: -42px;
   position: absolute;
+  z-index: 999;     // div 맨 앞으로 오기
   background-color: white;
   border-radius: 10px;
 }
 
-.basketContant {
+.cartContant {
   padding: 5%;
   display: flex;
   justify-content: space-between;
@@ -27,7 +28,7 @@
 }  
 
 /* 장바구니 타이틀 */
-.basketTitle {
+.cartTitle {
   display: flex;
   align-items: center;
 
@@ -39,7 +40,7 @@
 }
 
 // 메뉴 추가 목록 스타일
-.basketMenuList {
+.cartList {
   margin: 5% 0 5% 5%;
   max-height: 72%;
   overflow-y: auto;
@@ -63,45 +64,53 @@
   }
 }
   
-
-.basketMenuItem {
+/* 카트 각 상품 */
+.cartItem {
   margin-bottom: 10%;
   padding-bottom: 10%;
   border-bottom: 1px solid #dedede;
-}
 
-.basketMenuTitle {
-  margin: 0;
-  font-size: 25px;
-}
+  .itemCloseIcon {
+    position: relative;
+    left: 90%;
+  }
 
-.basketMenuPrice {
-  margin: 2% 0 0 0;
-  font-size: 35px;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-
-.basketMenuCloseIcon {
-  position: relative;
-  left: 90%;
-}
-
-/* 메뉴 갯수 */
-.basketMenuCount {
-  margin: 7%;
-  display: flex;
-  justify-content: space-between;
-
-  span {
-    color: #555555;
+  .itemTitle {
+    margin: 0;
+    font-size: 25px;
+  }
+  
+  .itemPrice {
+    margin: 2% 0 0 0;
     font-size: 35px;
     font-weight: 700;
+    letter-spacing: 3px;
+  }
+
+  .itemOption {
+    margin-top: 15px;
+
+    p {
+      margin: 5px;
+    }
+  }
+
+  /* 메뉴 갯수 */
+  .itemCount {
+    margin: 7%;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      color: #555555;
+      font-size: 35px;
+      font-weight: 700;
+    }
   }
 }
 
-/* 합계 */
-.basketTotal {
+/* 카트 총 합계 */
+.cartTotal {
   position: absolute;
   bottom: 10%;
   width: 90%;
@@ -114,13 +123,13 @@
   }
 }  
 
-.basketTotalPrice {
+.cartTotalPrice {
   font-size: 35px;
   font-weight: 600;
 }
 
 /* 주문하기 버튼 */
-.basketOrderButton {
+.cartOrderButton {
   position: absolute;
   bottom: 0px;
   left: 50%;
@@ -137,22 +146,22 @@
 }
 
 /* 스크롤바 너비와 배경색 지정 */
-.basketMenuList::-webkit-scrollbar {
+.cartMenuList::-webkit-scrollbar {
   width: 10px; /* 스크롤바 너비 */
 }
 
-.basketMenuList::-webkit-scrollbar-track {
+.cartMenuList::-webkit-scrollbar-track {
   background-color: #ffffff; /* 스크롤바 트랙 배경색 */
 }
 
 /* 스크롤바 썸네일 스타일 지정 */
-.basketMenuList::-webkit-scrollbar-thumb {
+.cartMenuList::-webkit-scrollbar-thumb {
   background-color: #b9b9b9; /* 스크롤바 썸네일 배경색 */
   border-radius: 4px; /* 스크롤바 썸네일 둥근 모서리 */
 }
 
 /* 스크롤바 썸네일 호버 시 스타일 변경 */
-.basketMenuList::-webkit-scrollbar-thumb:hover {
+.cartMenuList::-webkit-scrollbar-thumb:hover {
   background-color: #FF5B5B; /* 스크롤바 썸네일 배경색 (마우스 오버 시) */
 }
   

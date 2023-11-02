@@ -30,7 +30,7 @@ function Drink() {
                     <div key={index} className={drinkStyle.drinkItem}>
                         <img src={drink.productIMGList[0].imageLocation} alt={drink.name} />
                         <p>{drink.name}</p>
-                        <p className={drinkStyle.drinkPrice}>{drink.price}</p>
+                        <p className={drinkStyle.drinkPrice}>{formatNumber(drink.price)}원</p>
                     </div>
                 ))}
             </div>

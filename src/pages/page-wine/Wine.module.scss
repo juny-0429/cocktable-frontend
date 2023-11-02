@@ -29,7 +29,7 @@
     
             .wineName {
                 height: 4.5em;
-                font-size: 40px;
+                font-size: 35px;
                 font-weight: 700;
 
                 .nameKR {
@@ -38,8 +38,9 @@
             }
         
             .price {
-                font-size: 70px;
+                font-size: 60px;
                 font-weight: 900;
+                white-space: nowrap;
             }
         }    
 

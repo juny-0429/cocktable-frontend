@@ -32,7 +32,7 @@ function Cocktail() {
                     <div key={index} className={ctStyle.cocktailItem}>
                         <img src={cocktail.productIMGList[0].imageLocation} alt={cocktail.name} />
                         <p>{cocktail.name}</p>
-                        <p className={ctStyle.cocktailPrice}>{formatNumber(cocktail.price)}</p>
+                        <p className={ctStyle.cocktailPrice}>{formatNumber(cocktail.price)}원</p>
                     </div>
                 ))}
             </div>

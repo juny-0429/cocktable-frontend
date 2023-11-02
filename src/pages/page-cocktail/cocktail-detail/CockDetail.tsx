@@ -1,4 +1,5 @@
 import CDstyle from './CockDetail.scss';
+
 import React from 'react';
 
 
