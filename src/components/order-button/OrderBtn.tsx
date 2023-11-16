@@ -1,4 +1,5 @@
-import OBStyle from './OrderBtn.module.scss';
+import OBStyle from './orderBtn.module.scss';
+
 import React, {useState} from "react";
 import Order from '../order/Order'
 
