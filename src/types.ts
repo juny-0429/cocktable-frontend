@@ -15,3 +15,8 @@ export type Product = {
 export type ThunkDispatch = ReduxThunkDispatch<{}, [], any>;
 
 export type StringRecord = Record<string, string>;
+
+export type ProductDetailProps = {
+    productCode: String;
+    onClose: () => void;
+}

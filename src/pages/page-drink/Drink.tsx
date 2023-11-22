@@ -11,7 +11,7 @@ import { formatNumber } from '../../utils/FormatNumber';
 
 function Drink() {
 
-    const drinkList = useSelector<StringRecord>(state => state.productPageReducer);
+    const drinkList = useSelector<StringRecord>(state => state.productReducer);
 
     const dispatch: ThunkDispatch = useDispatch();
 

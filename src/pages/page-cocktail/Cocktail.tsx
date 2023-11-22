@@ -12,7 +12,7 @@ import { formatNumber } from '../../utils/FormatNumber';
 
 function Cocktail() {
 
-    const cocktailList = useSelector<StringRecord>(state => state.productPageReducer);
+    const cocktailList = useSelector<StringRecord>(state => state.productReducer);
 
     const dispatch: ThunkDispatch = useDispatch();
 

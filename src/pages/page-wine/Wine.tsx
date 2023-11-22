@@ -13,7 +13,7 @@ import { generateStarRating } from '../../utils/GenerateStarRating';
   
 function Wine() {
 
-    const wineList = useSelector<StringRecord>(state => state.productPageReducer);
+    const wineList = useSelector<StringRecord>(state => state.productReducer);
 
     const dispatch: ThunkDispatch = useDispatch();
 

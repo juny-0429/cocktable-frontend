@@ -1,0 +1,49 @@
+.detailMain {
+    width: 470px;
+    height: 984px;
+    top: 75px;
+    right: 370px;
+    position: absolute;
+    z-index: 999;     // div 맨 앞으로 오기
+    background-color: white;
+    border-radius: 10px;
+}
+
+.imageContainer{
+    width: 470px;
+    height: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .detailImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.title {
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+
+    .name{
+        margin: 0;
+        font-size: 40px;
+        font-weight: 900;
+        letter-spacing: 0.3em;
+    }
+
+    .englishName {
+        margin: 0;
+        font-size: 25px;
+        font-weight: 900;
+        color: #AFAFAF;
+
+    }
+
+    .size {
+        font-size: 25px;
+        font-weight: 300;
+    }
+}
